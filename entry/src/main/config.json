@@ -59,11 +59,12 @@
           "type": "pageAbility"
         },
         "pages": [
+          "pages/testImage",
           "pages/myWeb",
           "pages/articlepage",
           "pages/home",
-          "pages/index"
-
+          "pages/index",
+          "pages/testImage2"
         ],
         "name": ".MainAbility",
         "window": {
@@ -74,13 +75,13 @@
     ],
     "reqPermissions": [
       {
-        "name": "ohos.permission.INTERNET",
         "usedScene": {
           "ability": [
             "MainAbility"
           ],
-          "when":"always"
-        }
+          "when": "always"
+        },
+        "name": "ohos.permission.INTERNET"
       }
     ]
   }
