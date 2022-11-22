@@ -3,14 +3,77 @@ struct MyGridContainer {
   build() {
     Column() {
       GridContainer({ columns: 12, gutter: 5, margin: 9 }) {
-
-
+        Column({space:5}){
+          Row({space:5}){
+            Button("图文")
+              .height(85)
+              .type(ButtonType.Normal)
+              .borderRadius(5)
+              .useSizeType({
+                sm:{span:6,offset:0},
+                md:{span:4,offset:0}
+              })
+            Column({space:5}){
+              Row(){
+                Button("图文")
+                  .type(ButtonType.Normal)
+                  .borderRadius(5)
+                  .useSizeType({
+                    sm:{span:3,offset:0},
+                    md:{span:4,offset:0}
+                  })
+                Button("图文")
+                  .type(ButtonType.Normal)
+                  .borderRadius(5)
+                  .useSizeType({
+                    sm:{span:3,offset:3},
+                    md:{span:4,offset:4}
+                  })
+              }
+              Button("图文")
+                .type(ButtonType.Normal)
+                .borderRadius(5)
+                .useSizeType({
+                  sm:{span:6,offset:0},
+                  md:{span:8,offset:0}
+                })
+            }
+          }
+          Row(){
+            Button("图文")
+              .type(ButtonType.Normal)
+              .borderRadius(5)
+              .useSizeType({
+                sm:{span:3,offset:0},
+                md:{span:4,offset:0}
+              })
+            Button("图文")
+              .type(ButtonType.Normal)
+              .borderRadius(5)
+              .useSizeType({
+                sm:{span:3,offset:3},
+                md:{span:4,offset:4}
+              })
+            Button("图文")
+              .type(ButtonType.Normal)
+              .borderRadius(5)
+              .useSizeType({
+                sm:{span:3,offset:6},
+                md:{span:4,offset:8}
+              })
+            Button("图文")
+              .type(ButtonType.Normal)
+              .borderRadius(5)
+              .useSizeType({
+                sm:{span:3,offset:9},
+                md:{span:4,offset:12}
+              })
+          }
+        }
       }
       .width("100%")
-      .height("200")
       .border({ width: 1, color: "#000" })
     }
-    .padding(10)
   }
 }
 
