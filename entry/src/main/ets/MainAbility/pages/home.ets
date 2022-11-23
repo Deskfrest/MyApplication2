@@ -1,15 +1,16 @@
 import MyGrid from "../common/components/myGrid"
 import MyGridContainer from "../common/components/myGridContainer"
+import MyListItem from "../common/components/myListItem"
 import display from '@ohos.display';
 
 @Entry
 @Component
 struct Home {
   @State btnList: number[] = [
-    1, 2, 3, 4, 5, 6, 7, 8
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
   ]
   private width: number
-  private height: number
+  @State height: number = 0
 
   onPageShow() {
     var displayClass = null;
@@ -27,20 +28,29 @@ struct Home {
 
   build() {
 
-    Column() {
+    Stack({ alignContent: Alignment.TopStart }) {
       //      普通表格布局
       //      MyGrid({ btnList: $btnList })
       //      栅格布局
+
+
       MyGridContainer()
-
-      Scroll() {
-
-        Button(this.height+"")
-          .height(this.height)
+      List({ space: 5 }) {
+        ForEach(this.btnList, (item, index) => {
+          ListItem() {
+            MyListItem({ index: item })
+          }
+        }, item => item)
       }
-      .height(this.height - 10 - 85 - 5 - 40)
-      .border({ width: 10 })
+      .width("100%")
+      //      .height(this.height - 10 - 85 - 5 - 40)
+      .border({ width: 1 })
+      .edgeEffect(EdgeEffect.None) // 滑动到边缘无效果
+      .margin({ top: 10 + 85 + 5 + 40 })
+
     }
-    .padding(10)
+    .width("100%")
+    .height("100%")
+    .padding(1)
   }
 }

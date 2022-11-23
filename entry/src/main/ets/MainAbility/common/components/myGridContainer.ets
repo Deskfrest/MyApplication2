@@ -72,7 +72,6 @@ struct MyGridContainer {
         }
       }
       .width("100%")
-      .border({ width: 1, color: "#000" })
     }
   }
 }

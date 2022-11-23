@@ -53,6 +53,7 @@
           "type": "pageAbility"
         },
         "pages": [
+          "pages/articlepage",
           "pages/home",
           "pages/index"
 
