@@ -11,6 +11,11 @@ struct ContentItemUi {
   @Prop contentText: string
   contentImage: Resource
   @Link userClick: number
+  @Consume("panelInput") panelInput: {
+    panelType: string // titleText`或 contentText
+    panelText: string //文本本身
+    panelIsShow: boolean //判断是否显示panel组件
+  }
 
   //删除操作
   deleteItem() {
@@ -49,14 +54,9 @@ struct ContentItemUi {
             .backgroundColor("#ffffd86c")
             .position({ x: 0, y: 0 })
             .onClick(() => {
-              let new_arr = JSON.parse(JSON.stringify(this.article.content))
-              new_arr.forEach((item, index) => {
-                if (item.contentIndex == this.userClick) {
-                  item.contentText = "1231231231231231231"
-                }
-              })
-              this.article.content = new_arr
-              //              this.contentText="1231231231231231231"
+              this.panelInput.panelType = "contentText"
+              this.panelInput.panelText = this.contentText
+              this.panelInput.panelIsShow = true
             })
           Button("删除")
             .width(65)
@@ -68,7 +68,8 @@ struct ContentItemUi {
               this.deleteItem()
             })
         }
-      } else if (this.contentType == "image") {
+      }
+      else if (this.contentType == "image") {
         Image(this.contentImage)
           .width("100%")
           .height(360 / 16 * 9)
@@ -106,8 +107,8 @@ struct ContentItemUi {
                     let new_arr = JSON.parse(JSON.stringify(this.article.content))
                     new_arr.forEach((item) => {
                       if (item.contentIndex == this.userClick) {
-                        console.info("imageUrl="+imageUrl)
-                        item.contentImage = "dataability://"+imageUrl
+                        console.info("imageUrl=" + imageUrl)
+                        item.contentImage = "dataability://" + imageUrl
                       }
                     })
                     this.article.content = new_arr

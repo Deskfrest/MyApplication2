@@ -4,7 +4,7 @@ import ContentItemUi from "./ContentItemUi"
 @Component
 struct ArticleContentUi {
   @Consume("article") article: Article
-  @State userClick: number = -1
+  @Link userClick: number
 
   build() {
     Column() {
