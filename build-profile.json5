@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "C:\\Users\\zyr\\.ohos\\config\\auto_debug_MyApplication2_com.example.myapplication2_260086000251825631.cer",
-          "storePassword": "0000001BD53557387DE13BE6D381F72384638FAC71D4C06CEEFF5EEE54EB32B1992770B4B55699B015C82C",
+          "certpath": "C:\\Users\\周渝人\\.ohos\\config\\auto_debug_MyApplication2_com.example.myapplication2_260086000251825631.cer",
+          "storePassword": "0000001B627003E34BD56D31D300BBC0881921C35F7C847AF699BC84EF939F346446D415FC99E9282050EC",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001B4C5072521DF0533526E82250B228DD1DB782F3002753F1D4C271E0C9D0969569F32C3D2F2BCBF4",
-          "profile": "C:\\Users\\zyr\\.ohos\\config\\auto_debug_MyApplication2_com.example.myapplication2_260086000251825631.p7b",
+          "keyPassword": "0000001B990CD0954EADECA7FD683EC251EB1B5B0421EBBC6D4BCADE938CE5BC5F56CFCE85420580C9BA20",
+          "profile": "C:\\Users\\周渝人\\.ohos\\config\\auto_debug_MyApplication2_com.example.myapplication2_260086000251825631.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\zyr\\.ohos\\config\\auto_debug_MyApplication2_com.example.myapplication2_260086000251825631.p12"
+          "storeFile": "C:\\Users\\周渝人\\.ohos\\config\\auto_debug_MyApplication2_com.example.myapplication2_260086000251825631.p12"
         }
       }
     ],
