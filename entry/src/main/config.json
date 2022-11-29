@@ -59,12 +59,13 @@
           "type": "pageAbility"
         },
         "pages": [
+          "pages/testImage2",
           "pages/testImage",
           "pages/myWeb",
           "pages/articlepage",
           "pages/home",
-          "pages/index",
-          "pages/testImage2"
+          "pages/index"
+
         ],
         "name": ".MainAbility",
         "window": {
